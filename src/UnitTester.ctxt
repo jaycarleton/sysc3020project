@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.params=
+comment0.target=UnitTester()
+comment1.params=
+comment1.target=void\ changeApplication()
+comment1.text=\r\n\ Create\ a\ StudentProfile.\r\n\ Create\ two\ ProfProfiles\r\n\ Comment\ twice,Rate\ three\ time,\ and\ Invest\ in\ Application\r\n\ Update\ CV\r\n\ View\ Application\ Info\r\n
+comment2.params=
+comment2.target=void\ updateStudent()
+comment2.text=\r\n\ Create\ a\ StudentProfile.\r\n\ Show\ default\ info.\r\n\ Update\ Profile\ info.\r\n\ Show\ new\ profile\ info.\r\n
+comment3.params=
+comment3.target=void\ updateProfessor()
+comment3.text=\r\n\ Create\ a\ StudentProfile.\r\n\ Show\ default\ info.\r\n\ Update\ Profile\ info.\r\n\ Show\ new\ profile\ info.\r\n
+comment4.params=
+comment4.target=void\ withdraw()
+comment4.text=\r\n\ Create\ \ a\ StudentProfile.\r\n\ Withdraw.\r\n\ Attempt\ to\ print\ Application\ info.\r\n
+comment5.params=
+comment5.target=void\ decide()
+comment5.text=\r\n\ Create\ a\ StudentProfile.\r\n\ Set\ status\ to\ acepted.\r\n\ Make\ a\ decision.\r\n
+comment6.params=
+comment6.target=void\ fullCheckup()
+numComments=7

@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.params=name\ email\ id\ department
+comment0.target=ProfProfile(java.lang.String,\ java.lang.String,\ int,\ java.lang.String)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ ProfProfile\r\n
+comment1.params=associate
+comment1.target=void\ setAssociate(Associate)
+comment2.params=application
+comment2.target=void\ commentOn(Application)
+comment2.text=\r\n\ Add\ a\ comment\ to\ the\ application\r\n\ \r\n\ @param\ \ application\:\ the\ application\ to\ comment\ on\r\n
+comment3.params=application
+comment3.target=void\ rate(Application)
+comment3.text=\r\n\ Add\ a\ rating\ to\ the\ application\r\n\ \r\n\ @param\ \ application\:\ the\ application\ to\ rate\r\n
+comment4.params=application
+comment4.target=void\ allocateFunds(Application)
+comment4.text=\r\n\ Increase\ funding\ to\ the\ graduate\ application\ \r\n\ \r\n\ @param\ \ application\:\ the\ application\ to\ invest\ in\r\n
+comment5.params=
+comment5.target=java.util.ArrayList\ getAdvising()
+comment6.params=
+comment6.target=java.util.ArrayList\ getSupervising()
+comment7.params=application
+comment7.target=void\ passOn(Application)
+comment7.text=\ Passes\ an\ application\ on\ to\ an\ Associate\ for\ judgement.\r\n\r\n@param\ application\:\ the\ application\ to\ pass\ on\r\n
+numComments=8

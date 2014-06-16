@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.params=owner
+comment0.target=Application(StudentProfile)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Application\r\n
+comment1.params=
+comment1.target=void\ printInfo()
+comment1.text=\r\n\ Prints\ the\ info\ of\ the\ application,\ formatted\ nicely.\r\n
+comment2.params=
+comment2.target=java.util.ArrayList\ getCV()
+comment2.text=\r\n\ Access\ methof\ for\ list\ of\ references.\r\n
+comment3.params=
+comment3.target=java.util.ArrayList\ getComments()
+comment3.text=\r\n\ Access\ methof\ for\ list\ of\ comments.\r\n
+comment4.params=
+comment4.target=java.util.ArrayList\ getRatings()
+comment4.text=\r\n\ Access\ methof\ for\ list\ of\ ratings.\r\n
+comment5.params=b
+comment5.target=void\ changeStatus(boolean)
+comment6.params=
+comment6.target=void\ printAdvisors()
+numComments=7

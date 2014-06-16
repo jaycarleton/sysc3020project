@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=ApplicationManager()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ ProfileManager\r\n
+comment1.params=owner
+comment1.target=void\ createApplication(StudentProfile)
+comment1.text=\r\n\ Create\ a\ graduate\ application\r\n\ \r\n\ @param\ \ owner\:\ the\ owning\ students\ profile\r\n
+comment2.params=owner
+comment2.target=void\ destroyApplication(StudentProfile)
+comment2.text=\r\n\ Destroy\ an\ application\ and\ remove\ from\ list\ of\ active\ ones.\ Invoking\ this\ method\ with\ an\ applicationless\ profile\ will\ have\ no\ effect.\r\n\ \r\n\ @param\ \ owner\:\ the\ owning\ students\ profile\r\n
+comment3.params=name
+comment3.target=Application\ getApplication(java.lang.String)
+comment3.text=\r\n\ Retrieve\ an\ application\ based\ on\ the\ name\ of\ its\ owning\ student\r\n\ \r\n\ @param\ \ name\:\ the\ name\ of\ the\ owning\ student\r\n\ @return\ application\:\ the\ students\ application\r\n
+numComments=4

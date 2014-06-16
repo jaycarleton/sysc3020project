@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=author\ value
+comment0.target=Rating(java.lang.String,\ int)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Reference\r\n
+comment1.params=
+comment1.target=java.lang.String\ stars()
+comment1.text=\r\n\ Prints\ the\ stars\ of\ the\ rating,\ formatted\ nicely.\r\n
+comment2.params=
+comment2.target=void\ printInfo()
+comment2.text=\r\n\ Prints\ the\ info\ of\ the\ rating,\ formatted\ nicely.\r\n
+numComments=3
