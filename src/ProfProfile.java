@@ -4,7 +4,7 @@ import java.util.Scanner;
  * The profiles used by professors.
  * 
  * @author Group 7
- * @date June 10, 2014
+ * @date June 16, 2014
  */
 public class ProfProfile extends Profile
 {
@@ -21,16 +21,20 @@ public class ProfProfile extends Profile
         // initialise instance variables
         super(name,email,id,department);//inherit from Profile superclass
         
-        //Note that the fnctionality for supervising and advising profiles is not implemented in 
-        //this project iteration
-        advising=new ArrayList<Application>();
-        supervising=new ArrayList<Application>();
-        this.associate = associate;
+        //Note that the fnctionality for supervising and advising profiles IS NOW IMPLEMENTED 
+        advising=new ArrayList<Application>();//list of applications to advise on 
+        supervising=new ArrayList<Application>();//list of applications to supervise on
     }
 
+    /**
+     * Set the associate to pass on applications to. 
+     * There can only be one associate to do this for.
+     * 
+     * @param associate: the associate to pass on to
+     */
     public void setAssociate(Associate associate)
     {
-        this.associate=associate;
+        this.associate=associate;//set associate
     }
     
     /**
@@ -89,11 +93,21 @@ public class ProfProfile extends Profile
         application.funds+=amount;//add to current amount
     }
     
+    /**
+     * Accessor method for list of applications currently being advised by this professor.
+     * 
+     * @return advising:list of advised applications
+     */
     public ArrayList<Application> getAdvising()
     {
         return advising;
     }
     
+    /**
+     * Accessor method for list of applications currently being supervised by this professor.
+     * 
+     * @return supervising:list of supervised applications
+     */
     public ArrayList<Application> getSupervising()
     {
         return supervising;

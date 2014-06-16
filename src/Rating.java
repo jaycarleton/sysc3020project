@@ -3,7 +3,7 @@ import java.util.Date;
  * Application references.
  * 
  * @author Group 7
- * @date Jun 10, 2014
+ * @date Jun 16, 2014
  */
 public class Rating
 {

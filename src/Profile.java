@@ -5,7 +5,7 @@ import java.util.Scanner;
  * Cannot be instantiated, only its sub-classes can.
  * 
  * @author Group 7
- * @date June 10, 2014
+ * @date June 16, 2014
  */
 public abstract class Profile
 {
@@ -17,6 +17,10 @@ public abstract class Profile
 
     /**
      * Constructor for objects of class Profile, needed only for super call in subclasses
+     * 
+     * @param name: name of user
+     * @param email: contact email of user
+     * @param id: either student number or faculty id number
      */
     public Profile(String name, String email, int id, String department)
     {
@@ -27,6 +31,7 @@ public abstract class Profile
            return;
        }
        
+       //set variables
         this.name=name;
         this.department=department;
         this.id=id;
@@ -44,7 +49,7 @@ public abstract class Profile
         System.out.println("Department of Studies: " + department);
     }
     
-        /**
+     /**
      * This method enables the user to update their profile.
      */
     public void update(){
@@ -84,7 +89,7 @@ public abstract class Profile
     }
     
     /**
-     * Updates emailof profile
+     * Updates email of profile
      */
     public void updateEmail()
     {
@@ -106,6 +111,11 @@ public abstract class Profile
         return;
     }
     
+    /**
+     * Accessor method for department of profile
+     * 
+     * @return department: department of user
+     */
     public String getDepartment()
    {
        return department;

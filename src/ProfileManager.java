@@ -4,14 +4,15 @@ import java.util.Scanner;
  * Manages all active profiles
  * 
  * @author Group 7
- * @date June 10, 2014
+ * @date June 16, 2014
  */
 public class ProfileManager
 {
     // instance variables
-    private ArrayList<Profile> list;//list of profiles
+    public ArrayList<Profile> list;//list of profiles
     public ApplicationManager applicationManager;//related application manager
-    public Matcher chair ; 
+    public Matcher chair ;//sibling sub-system for admins and associates
+    
     /**
      * Constructor for objects of class ProfileManager
      */
@@ -216,30 +217,46 @@ public class ProfileManager
        return;
     }
     
+   /**
+    * Accessor method for list of all profiles
+    * 
+    * @return list: list of all active profiles
+    */
     public ArrayList<Profile> getList()
     {
         return list;
     }
     
+    /**
+     * Sets the systems associate, so that all professors know where to pass an appication on to.
+     * 
+     * @param associate: the new system associate
+     */
     public void setAssociate(Associate associate)
     {
-        for(Profile profile : list)
-        if(profile instanceof ProfProfile)
+        for(Profile profile : list)//for all profiles
         {
-            ProfProfile prof=(ProfProfile) profile;
-            prof.setAssociate(associate);
+        	if(profile instanceof ProfProfile)//if the profile is for a professor
+        	{
+        		ProfProfile prof=(ProfProfile) profile;//typecast to allow for calling prof methods
+        		prof.setAssociate(associate);//set the associate for this professor
+        	}
         }
         return;
     }
   
+    /**
+     * Prints a list of all active student applications
+     */
     public void printStudents()
     {
-        System.out.println("Student Applications:\n");
-        for( Profile profile: list)
+        System.out.println("Student Applications:\n");//header
+        
+        for( Profile profile: list)//for all profiles
         {
-            if(profile instanceof StudentProfile)
+            if(profile instanceof StudentProfile)//if profile belongs to student
             {
-                profile.viewProfile();
+                profile.viewProfile();//print the profiles info
             }
         }
     }

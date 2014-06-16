@@ -1,6 +1,6 @@
 import java.util.Date;
 /**
- * References atached by the student to the application.
+ * References attatched by the student to the application.
  * 
  * @author Group 7
  * @date June 10, 2014

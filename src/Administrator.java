@@ -1,52 +1,57 @@
 import java.util.Scanner ;
 import java.util.ArrayList ; 
 /**
- * The system admin, which matches applications to professors, and 
+ * The system admin, which matches applications to professors, and can comment on applications as well
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Group 7
+ * @date June 16, 2014
  */
 public class Administrator
 {
-    // instance variables - replace the example below with your own
-    private ArrayList<ProfProfile> proflist;
-    private String username ; 
+    // instance variables
+    private ArrayList<ProfProfile> proflist;//list of professor to match applications with
+    private String username ; //name of current admin for system
+    
     /**
      * Constructor for objects of class Administrator
+     * 
+     * @param username: name of admin to reign over system
      */
     public Administrator(String username)
-    {  this.username = username ;
-       proflist= new ArrayList<ProfProfile>(); 
-        
+    {  
+    	this.username = username ;
+        proflist= new ArrayList<ProfProfile>(); //create empty list of professors
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Comment on an application
      * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * @param  application: the application to comment on
      */
     public void commentOn(Application application)
     {
-        Scanner in=new Scanner(System.in);
+        Scanner in=new Scanner(System.in);//scanner for user input
         System.out.println("Enter comment.");
-        String content=in.nextLine();
+        String content=in.nextLine();//receive input
         
         if( content.isEmpty() )//check for valid comment
         {
             System.out.println("Empty Comment.");
-            return;
+            return;//exit without adding comment
         }
         
         //else add
         application.getComments().add(new Comment(username,content));
     }
     
+    /**
+     * Accessor for admin name
+     * 
+     * @return username:name of admin
+     */
     public String getName()
     {
         return username;
     }
-    
-    
     
 }

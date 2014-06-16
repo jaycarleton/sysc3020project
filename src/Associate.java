@@ -1,9 +1,10 @@
-import java.util.ArrayList; 
+import java.util.ArrayList;
+
 /**
- * Write a description of class Associate here.
+ * The deciding factor in reviewing applications from students.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Group 7
+ * @version June 16, 2014
  */
 public class Associate
 {
@@ -12,8 +13,10 @@ public class Associate
     private ArrayList<Application> list ;
     /**
      * Constructor for objects of class Associate
+     * 
+     * @param username:name of current associate
      */
-    public Associate(String Username)
+    public Associate(String username)
     {
         // initialise instance variables
         this.username = username;
@@ -21,10 +24,10 @@ public class Associate
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Make a decision of acceptance on an application
      * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * @param  decision: choice of accepting/declining
+     * @param a: the application to decide on
      */
     public void makeDecision(boolean decision ,Application a )
     {  
@@ -32,16 +35,30 @@ public class Associate
         list.remove(a);
     }
      
+    /**
+     * View an application
+     * 
+     * @param a: the application to view
+     */
     public void viewApplication( Application a)
     {
         a.printInfo() ;
     }
 
+    /**
+     * Accessor method for associates name
+     * 
+     * @return username:name of associate
+     */
     public String getName()
     {
         return username;
     }
 
+    /**
+     * Accessor method for list of current applications passed on by professors
+     * @return list: list of current applications
+     */
     public ArrayList<Application> getList()
     {
         return list;

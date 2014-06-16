@@ -3,7 +3,7 @@ import java.util.ArrayList;
  * Manages the active applications.
  * 
  * @author Group 7
- * @version June 10, 2014
+ * @version June 16, 2014
  */
 public class ApplicationManager
 {

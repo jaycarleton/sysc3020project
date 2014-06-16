@@ -124,7 +124,7 @@ public class UnitTester
    {
        profileManager=new ProfileManager();
        
-       profileManager.createStudent("Josh Cohen-Collier", "josh.cohencollier@carleton.ca",100855222,"Communications Engineering");//create the new student
+       profileManager.createStudent("Josh Cohen-Collier", "josh.cohencollier@carleton.ca",100855222,"Engineering");//create the new student
        
        //add references
        profileManager.getStudent(100855222).getApplication().getCV().add(new Reference("Pavan Gunupudi", "Awesome job Josh! Great Work!"));
@@ -146,18 +146,18 @@ public class UnitTester
        profileManager.getStudent(100855222).getApplication().getComments().add(new Comment("Igor Ivanov", "Good start, but needs more capacitors."));
        profileManager.getStudent(100855222).getApplication().getComments().add(new Comment("Lynn Marshall", "Try using a multi-threaded environment."));
        
-       System.out.println("<<A new profile for Josh Cohen-Collier has been created, and several profs have commented on it. You, the Admin, will now comment too!>>");
+       System.out.println("\t\t\t<<A new profile for Josh Cohen-Collier has been created, and several profs have commented on it. You, the Admin, will now comment too!>>\n");
       
        //1 comment from admin
        profileManager.chair.getAdmin().commentOn(profileManager.getStudent(100855222).getApplication());
        
        //match to professors
-       System.out.println("\n<<The profile has been matched to a set of appropriate professors for advising. Here they are.>>");
+       System.out.println("\t\t\t\t\t\n<<The profile has been matched to a set of appropriate professors for advising. Here they are.>>\n");
        profileManager.chair.matchApplication(profileManager.applicationManager.getApplication("Josh Cohen-Collier"));
        profileManager.applicationManager.getApplication("Josh Cohen-Collier").printAdvisors();
        
        //now view the new info
-       System.out.println("<<Here is the info now.>>");
+       System.out.println("\t\t\t\t\t<<Here is the info now.>>\n");
        profileManager.getStudent(100855222).viewProfile();
        profileManager.applicationManager.getApplication("Josh Cohen-Collier").printInfo();
        
@@ -167,7 +167,7 @@ public class UnitTester
        profileManager.getProfessor("Igor Ivanov").passOn(profileManager.applicationManager.getApplication("Josh Cohen-Collier"));
        
        //associate now makes decision
-       System.out.println("<<You are now the admin, make a decision on the profile!(1 is yes, 0 is no)\n>>");
+       System.out.println("\t\t\t<<You are now the admin, make a decision on the profile!(1 is yes, 0 is no)>>\n");
        Scanner in= new Scanner(System.in);
        int input= in.nextInt();
        boolean choice=false;//by default
@@ -180,8 +180,9 @@ public class UnitTester
        profileManager.chair.getAssociate().makeDecision(choice, profileManager.applicationManager.getApplication("Josh Cohen-Collier"));
        
        //now time to view the profile again
-       System.out.println("\n");
+       System.out.println("\t\t\t\t<<Now view the changes.>>>\n");
        profileManager.applicationManager.getApplication("Josh Cohen-Collier").printInfo();
+       System.out.println("\n\t\t\t\t\t\tDone.\n");
     }
        
     public static void main(String args[])

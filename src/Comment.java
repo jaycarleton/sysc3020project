@@ -3,11 +3,11 @@ import java.util.Date;
  * Comments attached to an Application.
  * 
  * @author Group 7
- * @date June 14, 2014
+ * @date June 16, 2014
  */
 public class Comment
 {
-    // instance variables - replace the example below with your own
+    // instance variables
     private String name;//name of comment author
     private String comment;//text contents of comment
     private Date date;//date comment is created

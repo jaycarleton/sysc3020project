@@ -3,7 +3,7 @@ import java.util.Scanner;
  * The profile of a graduating student
  * 
  * @author Group 7
- * @date June 10, 2014
+ * @date June 16, 2014
  */
 public class StudentProfile extends Profile
 {
@@ -59,8 +59,6 @@ public class StudentProfile extends Profile
         }    
         
     }
-    
-
     
     /**
      * This method enables the student to withdraw the application
