@@ -3,7 +3,7 @@ import java.util.Scanner;
  * This class contains only methods that test various scenarious of the sub-systems.
  * 
  * @author Group 7
- * @date June 10, 2014
+ * @date June 16, 2014
  */
 public class UnitTester
 {
@@ -185,11 +185,14 @@ public class UnitTester
        System.out.println("\n\t\t\t\t\t\tDone.\n");
     }
        
+   /**
+    * Brings up user interface to initiate choice of unit tests performed.
+    */
     public static void main(String args[])
     {
-    	Scanner in = new Scanner(System.in);
-    	UnitTester unitTester= new UnitTester();
-    	while(true)
+    	Scanner in = new Scanner(System.in);//for user input
+    	UnitTester unitTester= new UnitTester();//create an instance to play around with
+    	while(true)//loop until exit
         {
             System.out.println("Welcome to the Unit Tester UI. Please enter the number of the corresponding unit test, then follow the instructions.");
             System.out.println("\t 1:Change Application-Update an applications CV, add comments and ratings, then view the changes.");
@@ -213,7 +216,5 @@ public class UnitTester
                 case 0: return;
             }
          }
-    	
     }
-       
 }
