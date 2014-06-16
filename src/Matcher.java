@@ -64,7 +64,7 @@ public class Matcher
         String department = application.owner.getDepartment();
         for(Profile profile: list)
         {
-            if( (profile instanceof ProfProfile) && (profile.getDepartment() == department) )
+            if( (profile instanceof ProfProfile) && (profile.getDepartment().equals()department) )
             {
                 ProfProfile prof=(ProfProfile)profile;
                 if(matcher.nextInt(1)==1)
@@ -74,6 +74,7 @@ public class Matcher
                 else 
                 {
                     prof.getAdvising().add(application);
+                    application.advisors.add(prof); 
                 }
             }
         }

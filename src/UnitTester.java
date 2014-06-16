@@ -14,32 +14,6 @@ public class UnitTester
    public UnitTester()
    {
        profileManager=null;
-       Scanner in = new Scanner(System.in);
-       
-       while(true)
-       {
-           System.out.println("Welcome to the Unit Tester UI. Please enter the number of the corresponding unit test, then follow the instructions.");
-           System.out.println("\t 1:Change Application-Update an applications CV, add comments and ratings, then view the changes.");
-           System.out.println("\t 2: Update Student Profile- Change the default name, email, Id number, and/or department of a students profile, then view the changes.");
-           System.out.println("\t 3: Update Professors Profile- Change the default name, email, Id number, and/or department of a professors profile, then view the changes.");
-           System.out.println("\t 4: The student withdraws their application. The profile manager then attempts to view the profile, which should cause an error");
-           System.out.println("\t 5: Make Decision- The application is given an ofer, and the student decides to accept or decline, then views the changes in the profile.");
-           System.out.println("\t 6: An all inclusive test that involves commenting, rating, assigning professos advisors and supervisors, passing on to the associate, and making a decision to make an offer or not.");
-           System.out.println("\t 0: Exit");
-           
-           int input = in.nextInt();
-           
-           switch(input)
-           {
-               case 1: changeApplication(); break;
-               case 2: updateStudent(); break;
-               case 3: updateProfessor(); break;
-               case 4: withdraw(); break;
-               case 5: decide(); break;
-               case 6: fullCheckup(); break;
-               case 0: return;
-           }
-        }
     }
    
    //Iteration 4 Tests
@@ -177,6 +151,11 @@ public class UnitTester
        //1 comment from admin
        profileManager.chair.getAdmin().commentOn(profileManager.getStudent(100855222).getApplication());
        
+       //match to professors
+       System.out.println("\n<<The profile has been matched to a set of appropriate professors for advising. Here they are.>>");
+       profileManager.chair.matchApplication(profileManager.applicationManager.getApplication("Josh Cohen-Collier"));
+       profileManager.applicationManager.getApplication("Josh Cohen-Collier").printAdvisors();
+       
        //now view the new info
        System.out.println("<<Here is the info now.>>");
        profileManager.getStudent(100855222).viewProfile();
@@ -185,7 +164,6 @@ public class UnitTester
        //prof now passes on to associate
        System.out.println("<<Now passed on to associate by prof.>>\n");
        profileManager.applicationManager.getApplication("Josh Cohen-Collier");
-       System.out.println("GOT HERE");
        profileManager.getProfessor("Igor Ivanov").passOn(profileManager.applicationManager.getApplication("Josh Cohen-Collier"));
        
        //associate now makes decision
@@ -206,6 +184,35 @@ public class UnitTester
        profileManager.applicationManager.getApplication("Josh Cohen-Collier").printInfo();
     }
        
-       
+    public static void main(String args[])
+    {
+    	Scanner in = new Scanner(System.in);
+    	UnitTester unitTester= new UnitTester();
+    	while(true)
+        {
+            System.out.println("Welcome to the Unit Tester UI. Please enter the number of the corresponding unit test, then follow the instructions.");
+            System.out.println("\t 1:Change Application-Update an applications CV, add comments and ratings, then view the changes.");
+            System.out.println("\t 2: Update Student Profile- Change the default name, email, Id number, and/or department of a students profile, then view the changes.");
+            System.out.println("\t 3: Update Professors Profile- Change the default name, email, Id number, and/or department of a professors profile, then view the changes.");
+            System.out.println("\t 4: The student withdraws their application. The profile manager then attempts to view the profile, which should cause an error");
+            System.out.println("\t 5: Make Decision- The application is given an ofer, and the student decides to accept or decline, then views the changes in the profile.");
+            System.out.println("\t 6: An all inclusive test that involves commenting, rating, assigning professos advisors and supervisors, passing on to the associate, and making a decision to make an offer or not.");
+            System.out.println("\t 0: Exit");
+            
+            int input = in.nextInt();
+            
+            switch(input)
+            {
+                case 1: unitTester.changeApplication(); break;
+                case 2: unitTester.updateStudent(); break;
+                case 3: unitTester.updateProfessor(); break;
+                case 4: unitTester.withdraw(); break;
+                case 5: unitTester.decide(); break;
+                case 6: unitTester.fullCheckup(); break;
+                case 0: return;
+            }
+         }
+    	
+    }
        
 }

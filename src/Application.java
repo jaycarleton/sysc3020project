@@ -16,7 +16,7 @@ public class Application
 
     public int version;//the version of the application
     
-    private ArrayList<ProfProfile> advisors;//profs that can be contacted for advice
+    public ArrayList<ProfProfile> advisors;//profs that can be contacted for advice
    
     public boolean status;//status of application
     
@@ -98,6 +98,9 @@ status = b ;}
     {
         System.out.println("\tAdvisors:\n");
         int i=1;
+        
+        System.out.println("Size" + advisors.size());
+        
         for(ProfProfile prof: advisors)
         {
             System.out.println("Advisor #" + i + ": " + prof.name + "\tEmail:" + prof.email);

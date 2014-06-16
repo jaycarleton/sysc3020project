@@ -1,6 +1,6 @@
 import java.util.Scanner;
 /**
- * The profil of a graduating student
+ * The profile of a graduating student
  * 
  * @author Group 7
  * @date June 10, 2014
@@ -142,6 +142,7 @@ public class StudentProfile extends Profile
         System.out.println("Enter contents of reference");
         return in.nextLine();
     }
+    
      /**
      * This method returns the application attatched
      * 

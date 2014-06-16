@@ -1,7 +1,7 @@
 import java.util.Scanner ;
 import java.util.ArrayList ; 
 /**
- * Write a description of class Administrator here.
+ * The system admin, which matches applications to professors, and 
  * 
  * @author (your name) 
  * @version (a version number or a date)
