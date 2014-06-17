@@ -26,3 +26,4 @@ Included Support Files:
 			Documentation-it5.pdf	Documentation for iteration 5 program
 			Documentation-it5.word	Documentation for iteration 5 program
 			Documentation-it4.word	Documentation for iteration 4 program
+			testing.word		Automated Analysis
